@@ -1,0 +1,121 @@
+<html>
+<head>
+    <title>Multiple Select</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link href="css/Multiple.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/icons.min.css" type="text/css" rel="stylesheet">
+    <link href="css/fontawesome.min.css" type="text/css" rel="stylesheet"/>
+    </head>
+    <body>
+        <!--the container--->
+       <div class="content well  well-lg">
+        <div class="rate ">
+           <h2 class="text-center">Rate Calculator</h2>
+           <p class="text-center">Get the current value for your transaction</p>
+           </div>
+        <!---the top buttons--->
+        <div class="buttonBox">
+           <button type="button" id="getSell" class="btn  btn-lg" onclick="getSell()">Sell (selected)</button>
+           <button type="button" id="getBuy" class="btn  btn-lg" onclick="getBuy()">Buy</button>
+           </div>
+        
+        <!---input fields--->
+           <form role="form">
+               <!---Gift Card Selection----->
+               <div class="giftSelection">
+           <div class=" form-group">
+               <!---Gift card category--->
+           <label for="select">Gift Card Category</label>
+           <select id="giftCategory" class="form-control" onchange="getGiftCategory()">
+               <option value="">Select</option>
+               <option value="Amazon">Amazon</option>
+               <option value="American Express">American Expresss</option>
+               <option value="Apple Store Gift Card">Apple Store Gift card</option>
+               <option value="Best Buy">Best Buy</option>
+               <option value="Colorpop">Colorpop</option>
+               <option value="eBay">eBay</option>
+               <option value="Footlocker">Footlocker</option>
+               <option value="GameStop">GameStop</option>
+               <option value="Google Play">Google Play</option>
+               <option value="iTunes">iTunes</option>
+               <option value="JC Penny">JC Penny</option>
+               <option value="Macy's">Macy's</option>
+               <option value="Nike">Nike</option>
+               <option value="Nordstrom">Nordstrom</option>
+               <option value="Play Station">Play Station</option>
+               <option value="Razor Gold">Razor Gold</option>
+               <option value="Saks">Saks</option>
+               <option value="Sephora">Sephora</option>
+               <option value="Steam">Steam</option>
+               <option value="Target">Target</option>
+               <option value="Target Visa">Target Visa</option>
+               <option value="Vanilla">Vanilla</option>
+               <option value="Visa Gift Card">Visa Gift Card</option>
+               <option value="Walmart">Walmart</option>
+               <option value="Walmart Visa">Walmart Visa</option>
+               <option value="Xbox">Xbox</option>
+               
+               </select>       
+           
+           </div>
+                   <div class=" form-group">
+                <!---Gift Card SubCategory--->
+                 <label for="select">Gift Card Subcategory</label> 
+                <select id="giftSubcategory" class="form-control" onchange="getGiftSubcat()">
+                       <option value="">Select</option>
+                       
+                       </select> 
+                   </div>
+                   
+                <div class=" form-group"> 
+                    <!---Amount--->
+                    <label for="amount">Amount <span class="dot">*</span></label>
+                    <input type="number" class="form-control" placeholder="Amount in USD" value="" id="amount" oninput="getAmount()" required/>
+                   </div>
+                   
+           </div>
+              
+               <!---Gift Card Purchases---->
+            <div class="giftPurchases" style="display:none">
+               <div class="form-group">
+                   <!---Gift Card Option Select----->
+                <label for="select">Gift Card</label> 
+                <select id="giftCard" class="form-control" onchange="getGiftCard()">
+                    <option value="">Select</option>
+                    <option value="520">Netflix Gift Card - (Rate:520)</option>
+                    <option value="520">Play Station Network - (Rate:520)</option>
+                    <option value="520">USA Amazon Gift Card - (Rate:520)</option>
+                    <option value="520">USA EBay Gift Card - (Rate:520)</option>
+                    <option value="520">USA Google Play - (Rate:520)</option>
+                    <option value="520">USA iTunes Gift Card - (Rate:520)</option>
+                    <option value="520">XBOX Gift Card - (Rate:520)</option>
+                       
+                       </select>
+                   <!---//Gift Card Option Select----->
+                </div>
+                
+                <div class=" form-group"> 
+                    <!---Amount--->
+                    <label for="amount">Amount <span class="dot">*</span></label>
+                    <input type="number" class="form-control" value="" placeholder="Amount in USD"  id="amount2" oninput="getAmountB()" required/>
+                   </div>
+               
+               </div>   
+               
+        </form>
+           <!----Convertion to Naira Value::::::Final Result---->
+           <div class="result">
+           <h2 class="Naira">= NGN <span class="nairaResult">0</span></h2>
+           </div>
+           
+        </div> 
+        
+        
+       
+        
+        <script src="js/jquery.min.js" type="text/javascript"></script>
+    <script src="js/multiple.js" type="text/javascript"></script>
+    </body>
+</html>    

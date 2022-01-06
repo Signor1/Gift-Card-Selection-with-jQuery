@@ -1,0 +1,41 @@
+.content{
+    margin: 50px 300px !important;
+    
+}
+.rate{
+    background-color: dodgerblue;
+    padding: 20px 10px 20px;
+    margin-bottom: 20px;
+}
+.rate h2,p{
+    color: #fff;
+    font-size: 1.8em;
+}
+.buttonBox{
+    width: inherit;
+    display: block;
+    
+}
+button{
+   display: inline-block;
+    width: auto !important;
+    outline: none !important;
+    border: none !important;
+    color: #fff !important;
+}
+button:first-child{
+    margin-left: 180px !important;
+    background-color: dodgerblue ;
+}
+button:last-child{
+    margin-left: 50px !important;
+    background-color:dimgray;
+}
+form{
+    margin-top: 30px;
+}
+.dot{
+    color: red;
+    font-size: 17px;
+    
+}
